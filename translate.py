@@ -1,10 +1,12 @@
 import pulsectl
 
+from pprint import pprint
+
 def list_pulse_audio_devices():
     pulse = pulsectl.Pulse('device-list')
     devices = pulse.sink_list() + pulse.source_list()  # Sinks are output devices, sources are input devices
 
-    print (f'{dir(devices[0])}')
+    pprint (dir(devices[0]))
 
     '''
     for device in devices:

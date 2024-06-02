@@ -2,23 +2,31 @@ import pulsectl
 
 from pprint import pprint
 
-def list_pulse_audio_devices():
-    pulse = pulsectl.Pulse('device-list')
-    devices = pulse.sink_list() + pulse.source_list()  # Sinks are output devices, sources are input devices
+import pulsectl
 
-    #  pprint (dir(devices[0]))
-
-    # '''
-    for device in devices:
-        print(f"Device Name: {device.name}")
-        print(f"Description: {device.description}")
-        print(f"Index: {device.index}")
-        # print(f"Sample Rate: {device.sample_rate}")
-        print(f"Channels: {device.channel_count}")
-        print(f"Volume: {device.volume.values}")
-        print(f"Muted: {device.mute}")
-        print()
-    # s'''
+def list_pulseaudio_sinks():
+    with pulsectl.Pulse('python-pulse-control') as pulse:
+        sinks = pulse.sink_list()
+        for sink in sinks:
+            print(f"Sink Name: {sink.name}")
+            print(f"Description: {sink.description}")
+            print(f"Index: {sink.index}")
+            print(f"State: {sink.state}")
+            print(f"Sample Specification: {sink.sample_spec}")
+            print(f"Channel Map: {sink.channel_map}")
+            print(f"Volume: {sink.volume}")
+            print(f"Muted: {sink.mute}")
+            print(f"Monitor Source: {sink.monitor_source}")
+            print(f"Monitor Source Name: {sink.monitor_source_name}")
+            print(f"Latency: {sink.latency}")
+            print(f"Driver: {sink.driver}")
+            print(f"Flags: {sink.flags}")
+            print(f"Properties: {sink.proplist}")
+            print(f"Configured Latency: {sink.configured_latency}")
+            print(f"Base Volume: {sink.base_volume}")
+            print(f"Sink Input By: {sink.sink_input_by}")
+            print(f"Module Index: {sink.owner_module}")
+            print("-" * 40)
 
 if __name__ == "__main__":
-    list_pulse_audio_devices()
+    list_pulseaudio_sinks()

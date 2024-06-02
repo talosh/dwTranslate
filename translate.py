@@ -8,7 +8,8 @@ def list_pulseaudio_sinks():
     with pulsectl.Pulse('python-pulse-control') as pulse:
         sinks = pulse.sink_list()
         for sink in sinks:
-            pprint(sink.proplist.keys())
+            if 'device.serial' in sink.proplist.keys():
+                pprint(sink.proplist['device.serial'])
             '''
             print(f"Sink Name: {sink.name}")
             print(f"Description: {sink.description}")

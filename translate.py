@@ -7,7 +7,7 @@ def list_pulse_audio_devices():
         print(f"Device Name: {device.name}")
         print(f"Description: {device.description}")
         print(f"Index: {device.index}")
-        print(f"Sample Rate: {device.sample_rate}")
+        # print(f"Sample Rate: {device.sample_rate}")
         print(f"Channels: {device.channel_count}")
         print(f"Volume: {device.volume.values}")
         print(f"Muted: {device.mute}")

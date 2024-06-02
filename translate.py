@@ -13,7 +13,7 @@ def list_pulseaudio_sinks():
             print(f"Index: {sink.index}")
             print(f"State: {sink.state}")
             print(f"Sample Specification: {sink.sample_spec}")
-            print(f"Channel Map: {sink.channel_map}")
+            # print(f"Channel Map: {sink.channel_map}")
             print(f"Volume: {sink.volume}")
             print(f"Muted: {sink.mute}")
             print(f"Monitor Source: {sink.monitor_source}")

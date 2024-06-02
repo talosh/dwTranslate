@@ -9,7 +9,7 @@ def list_pulseaudio_sinks():
         sinks = pulse.sink_list()
         for sink in sinks:
             try:
-                print(f"Serial.device.serial: {sink.proplist.device.serial}")
+                print(f"Serial.device.serial: {sink.proplist.serial}")
             except:
                 pass
             '''

@@ -24,7 +24,7 @@ def list_pulseaudio_sinks():
             print(f"Properties: {sink.proplist}")
             print(f"Configured Latency: {sink.configured_latency}")
             print(f"Base Volume: {sink.base_volume}")
-            print(f"Sink Input By: {sink.sink_input_by}")
+            # print(f"Sink Input By: {sink.sink_input_by}")
             print(f"Module Index: {sink.owner_module}")
             print("-" * 40)
 

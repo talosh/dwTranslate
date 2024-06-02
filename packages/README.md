@@ -60,8 +60,8 @@ conda pack --ignore-missing-files -n appenv
 * Unpack environment to flameTimewarpML folder
 
 ```bash
-mkdir  {flameTimewarpML folder}/packages/.miniconda/appenv/
-tar xvf appenv.tar.gz -C {flameTimewarpML folder}/packages/.miniconda/appenv/
+mkdir  {dwTranslate folder}/packages/.miniconda/appenv/
+tar xvf appenv.tar.gz -C {dwTranslate folder}/packages/.miniconda/appenv/
 ```
 
 * Remove environment tarball

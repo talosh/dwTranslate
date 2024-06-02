@@ -1,4 +1,4 @@
-## flameTimewarpML
+## swTranslate
 
 * pre-configured miniconda environment should be placed into hidden "packages/.miniconda" folder
 * the folder is hidden (starts with ".") in order to keep Flame from scanning it looking for python hooks
@@ -7,12 +7,14 @@
 ### Installing and configuring python environment manually
 
 * download Miniconda for Mac or Linux (I'm using python 3.11 for tests) from 
-<https://docs.anaconda.com/free/miniconda/miniconda-other-installer-links/>
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
 
 * install downloaded Miniconda python distribution, use "-p" to select install location. For example:
 
 ```bash
-sh ~/Downloads/Miniconda3-py311_24.1.2-0-Linux-x86_64.sh -bfsm -p ~/miniconda3
+sh Miniconda3-latest-Linux-x86_64.sh -bfsm -p ~/miniconda3
 ```
 
 * Activate anc clone default environment into another named "appenv" 
